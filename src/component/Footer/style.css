@@ -1,0 +1,29 @@
+:root {
+    --footHeigh: 50px;
+  }
+.footer{
+    bottom: 0;
+    left: 0;
+    border-top: solid gray 0.5px;
+    position: fixed;
+    z-index: 10;
+    background-color:white;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: var(--footHeigh);
+    width: 100vw;
+    color: black;
+    text-align: center;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid black;
+    width: 100%;
+    height: 100%;
+}
+.btn button{
+    width:150px;
+    height: 30px;
+}

@@ -1,0 +1,64 @@
+.PLcontainer{
+    margin-bottom: 100px;
+    width: 100%;
+    min-height: calc(100vh - var(--footHeigh));
+    max-height: fit-content;
+}
+
+.cont{margin: 5% 7.5%;border: solid gray 0.5px; display:grid; grid-template-columns: 50% 50%;background-color: white;border-radius: 10px;}
+.subContL{margin-left: 5%;font-weight: bold;}
+.subContR{font-style: italic;}
+.header{
+    border-bottom: solid gray 0.5px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 0.5fr;
+    grid-template-rows:50px;
+    background-color: rgb(76, 78, 113);
+}
+
+.subHeadTxt{
+    margin-left: 5%;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.subHead{
+    height: 100%;
+
+}
+.btnAdd ,.btnDel {
+    margin-top: 5px;
+    height: 35px;
+    width:100px;
+    background-color:rgb(76, 78, 113);
+    border: solid white 1px;
+    border-radius: 10px; 
+    color: white;
+}
+.btnAdd:hover,.btnDel:hover{
+    background-color:white;
+    color: black;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+    .ProdContainer{
+    border: solid gray 0.5px;
+    margin: 2.5%;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(221, 219, 219, 0.704);
+}
+.ProdContainer:hover{
+    background-color: rgba(176, 173, 173, 0.71); 
+}
+.btn_chk:hover{ background-color: black;}
+.check{
+    background-color: none;
+}
+.check:hover{background-color: green;}

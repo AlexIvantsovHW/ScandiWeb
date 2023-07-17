@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { NavLink, Route, Routes } from "react-router-dom";
+import s from "./common/style.css";
+import Footer from "./component/Footer/Footer";
+import PaContainer from "./component/Page2/PaContainer";
+import PlContainer from "./component/Page1/PlContainer";
+import Test from "./component/Page1/test";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={"Container"}>
+      <Footer/>
+        <Routes>
+        <Route path="/prodList" element={<PlContainer />} />
+        <Route path="/prodAdd" element={<PaContainer />} />
+        <Route path="/test" element={<Test />} />
+      </Routes>
     </div>
   );
 }

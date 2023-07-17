@@ -1,0 +1,81 @@
+.cont{
+    height: calc(100vh - var(--footHeigh));
+    background-color: rgb(255, 255, 255);
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height:calc(100vh - var(--footHeigh) - 50px) ;
+}
+
+.form{
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 160px 200px;
+    grid-template-rows: 1fr 1fr;
+}
+.lform{
+    padding-right: 10px;
+    text-align: end;
+    font-weight: bold;
+}
+
+.subContainer{margin:auto;}
+/*Header*/
+.header{
+    border-bottom: solid gray 0.5px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 0.5fr;
+    grid-template-rows:50px;
+    background-color: rgb(76, 78, 113);
+}
+
+.subHeadTxt{
+    margin-left: 5%;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.subHead{
+    height: 100%;
+
+}
+.btnSave ,.btnCancel {
+    margin-top: 5px;
+    height: 35px;
+    width:100px;
+    background-color:rgb(76, 78, 113);
+    border: solid white 1px;
+    border-radius: 10px; 
+    color: white;
+}
+.btnSave:hover,.btnCancel:hover{
+    background-color:white;
+    color: black;
+}
+/* Body */
+.subForm{
+    border: solid black 1px;
+    width: 450px;
+    display:grid;
+    margin-top: 10px;
+    background-color: rgb(210, 205, 205);
+}
+.tip{
+    margin:auto;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* _________________FORM_________________ */
+
+/* _________________Validation_________________ */
+.formErorr {    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 160px 200px;
+    grid-template-rows: 1fr 1fr;
+}
+.formErorr input{border:solid red 0.5px;}
+

@@ -7,7 +7,8 @@ const SET_INIT='SET_INIT'
 let initialState = {
       products: [],
       switchOption:'null',
-      deleteID:[],
+      deleteID:false,
+
 }
 
 const FormReducer = (state = initialState, action) => {

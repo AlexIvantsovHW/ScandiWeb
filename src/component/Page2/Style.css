@@ -3,12 +3,84 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 4fr;
+    background-color: white;
 }
 /*---------HEADER--------*/
+.header{
+    border-bottom: solid gray 0.5px;
+    height: var(--footHeigh);
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 0.5fr;
+    grid-template-rows:50px;
+    background-color: rgb(76, 78, 113);
+}
 
+.subHeadTxt{
+    margin-left: 5%;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.subHead{
+    height: 100%;
 
-/*------------------FORM----------------*/
+}
+.btnAdd ,.btnDel {
+    margin-top: 5px;
+    height: 35px;
+    width:100px;
+    background-color:rgb(76, 78, 113);
+    border: solid white 1px;
+    border-radius: 10px; 
+    color: white;
+}
+.btnAdd:hover,.btnDel:hover{
+    background-color:white;
+    color: black;
+}
 
+/*------------------BODY----------------*/
+.body{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    flex-direction: column;
+}
+.Form_Control,.FormControl{
+    margin-top: 5%;
+   display: grid;
+   grid-template-columns: 0.8fr 3fr;
+   grid-template-rows: 1fr 0.5fr;
+   grid-template-areas: 
+   'label Field'
+   'Error';
+    margin-left: 5%;
+    width: 550px;
+    max-height: fit-content;
+}
+select,.Add_input{margin-left:30px;width: 300px;}
+.tip{font-style: italic;}
+label{
+    color: black; font-weight: bold;
+    display: grid;
+    grid-area: 'label';
+}
+.Field{
+    display:grid;
+    grid-area: 'Field';
+}
+.error{
+    display:grid;
+    grid-area: 'Error';
+}
+
+.subBody{
+    margin-top: 2.5%;
+    margin-left: 5%;
+    background-color:  rgba(76, 78, 113, 0.708);
+    border: solid rgb(68, 68, 68);
+}
 /*----------------VALIDATION-------------*/
 .error {color:red;}
 

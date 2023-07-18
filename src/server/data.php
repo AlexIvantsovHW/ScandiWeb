@@ -8,33 +8,28 @@
     $db = "scandiWeb";
     $id = '';
     $method=$_SERVER['REQUEST_METHOD'];
-    $SKU=$_POST['SKU'];
-    $Name=$_POST['Name'];
-    $Price=$_POST['Price'];
-    $Size=$_POST['Size'];
-    $Weight=$_POST['Weight'];
-    $Length=$_POST['Length'];
-    $Height=$_POST['Height'];
-    $Width=$_POST['Width'];
-    $idDelete=$_POST['id'];
+    $SKU=$_POST['sku'];
+    $Name=$_POST['name'];
+    $Price=$_POST['price'];
+    $Size=$_POST['size'];
+    $Weight=$_POST['weight'];
+    $Length=$_POST['length'];
+    $Height=$_POST['height'];
+    $Width=$_POST['width'];
 
 
     $conn=new mysqli($server,$user,$pass,$db);
-
 
     if(mysqli_connect_error()){
         echo mysqli_connect_error();
         exit();
     }else{
-   
         switch($method){
             case 'GET':
                 $sql="select * from ProductList";   
                 break;
             case 'POST':
                 $conn->query("INSERT INTO `ProductList`(`SKU`,`Name`,`Price`,`Size`,`Weight`,`Length`,`Height`,`Width`) VALUES('$SKU','$Name','$Price','$Size','$Weight','$Length','$Height','$Width')");
-                $conn->query("DELETE FROM `ProductList` WHERE `ProductList`.`id` = ('$idDelete')");
-
                 break;
             };
             $sql="select * from ProductList";             

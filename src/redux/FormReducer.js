@@ -23,7 +23,7 @@ const FormReducer = (state = initialState, action) => {
 
 export const formAC=(state)=>{{return{type:SET_FORM,state}}}
 export const switchAC=(option)=>{debugger;{return{type:SET_OPTION,option}}}
-export const deleteIdAC=(id)=>{debugger;{return{type:SET_ID,id}}}
+export const deleteIdAC=()=>{debugger;{return{type:SET_ID,id}}}
 export const initAC=()=>{debugger;{return{type:SET_INIT}}}
 
 

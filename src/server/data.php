@@ -2,23 +2,22 @@
     // * позволяет всем источникам делать запросы на сервер. Refresh 5 -обновляет php каждые 5сек
     header('Access-Control-Allow-Origin:*', "Refresh: 3");
     // * (Имя хоста, Пользователь в phpAdmin, пароль в phpAdmin, имя БД)
-    $server = "localhost";
-    $user = "root";
-    $pass = "";
-    $db = "scandiWeb";
+    $server="localhost";
+	$user="id21050393_scandiweb";
+	$password="10032018_BakI";
+	$db="id21050393_scandiweb";
     $id = '';
     $method=$_SERVER['REQUEST_METHOD'];
-    $SKU=$_POST['sku'];
-    $Name=$_POST['name'];
-    $Price=$_POST['price'];
-    $Size=$_POST['size'];
-    $Weight=$_POST['weight'];
-    $Length=$_POST['length'];
-    $Height=$_POST['height'];
-    $Width=$_POST['width'];
+    if(isset($_POST["sku"])){$SKU=$_POST['sku'];}else{$SKU= "";}
+    if(isset($_POST["name"])){$Name=$_POST['name'];}else{$Name= "";}
+    if(isset($_POST["price"])){$Price=$_POST['price'];}else{$Price= "";}
+    if(isset($_POST["size"])){$Size=$_POST['size'];}else{$Size= "";}
+    if(isset($_POST["weight"])){$Weight=$_POST['weight'];}else{$Weight= "";}
+    if(isset($_POST["length"])){$Length=$_POST['length'];}else{$Length= "";}
+    if(isset($_POST["height"])){$Height=$_POST['height'];}else{$Height= "";}
+    if(isset($_POST["width"])){$Width=$_POST['width'];}else{$Width= "";}
 
-
-    $conn=new mysqli($server,$user,$pass,$db);
+    $conn=new mysqli($server,$user,$password,$db);
 
     if(mysqli_connect_error()){
         echo mysqli_connect_error();
